@@ -1,46 +1,65 @@
-# Smart India Hackathon: TreeSense Imaging
+# 🌳 TreeSense Imaging AI
 
-## Image Analytics for Tree Enumeration
-The project aims to address the challenge of accurately enumerating trees in forest areas earmarked for diversion due to developmental projects by developing an image analytics system utilizing satellite imagery or aerial photographs to automate tree enumeration. Traditional methods are time-consuming and prone to errors, making it crucial to develop an automated solution.
+An AI-powered image processing system developed for Smart India Hackathon (SIH 2023) that helps analyze tree images for intelligent monitoring and classification.
 
-## Overview
-The project includes a website with a landing page and a dashboard offering the following tools:
+## 🚀 Features
 
-- **Tree Count:** Allows accurate tree counting within designated forest areas.
-- **Green Cover Estimator:** Estimates green cover percentage.
-- **Tree Species Identifier:** Identifies tree species.
-- **Optimal Pathing:** [Computes the optimal path between two points within the area.](https://github.com/lag25/ForestPathPlanner)
-- **Historical Data:** Provides historical data for analysis and comparison.
+- 🌿 Tree image analysis
+- 🤖 AI-based prediction
+- 📷 Image processing
+- 📊 Easy-to-use interface
+- 💾 Dataset support
+- ⚡ Fast processing
 
-## Features
-- Landing Page: Showcases project overview with easy onboarding.
-- Dashboard: Offers toggle switches to access various tools.
-- Interface: User-friendly interface for easy interaction and exploration of results.
-- Integration: Seamless integration with forest management systems.
-- Visualization: Generates maps, reports, and visual representations of tree enumeration data.
+## 🛠 Tech Stack
 
-## Screenshots
-<center>
+- Python
+- OpenCV
+- TensorFlow / Keras
+- NumPy
+- Flask (if used)
+- HTML
+- CSS
+- JavaScript
 
-![Landing Page](screenshots/landing_page.png)
+## 📂 Project Structure
 
-![Dashboard](screenshots/dashboard.png)
+```
+TreeSense-Imaging/
+│
+├── Dataset/
+├── PythonScripts/
+├── screenshots/
+├── treesense/
+├── README.md
+└── LICENSE.md
+```
 
-![Tree Count](screenshots/tree_count.png)
+## 📸 Screenshots
 
-![Green Cover Estimator](screenshots/green_cover_estimator.png)
+(Add screenshots here)
 
-![Optimal Pathing](screenshots/optimal_pathing.png)
+## ⚙ Installation
 
-![Historical Data](screenshots/historical_data.png)
+```bash
+git clone https://github.com/shahrukhpinjare/tree-sense-imaging.git
+cd tree-sense-imaging
+pip install -r requirements.txt
+python app.py
+```
 
-</center>
+## 📌 Future Improvements
 
-## Getting Started
-To start using the tools, visit the website and navigate to the dashboard [here.](https://treesense.vipulchaturvedi.com/predict)
+- Real-time detection
+- Mobile application
+- Cloud deployment
+- Higher prediction accuracy
 
-## Contributions
-Contributions are welcome! Please open a PR to get started on contributing to the project.
+## 👨‍💻 Author
 
-## License
-This project is licensed under GNU AGPLv3
+**Mohd Shahrukh Pinjare**
+
+- GitHub: https://github.com/shahrukhpinjare
+- LinkedIn: (Add your LinkedIn)
+
+⭐ If you like this project, don't forget to star it.

@@ -1,28 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-		<title>Rainfall</title>
-	</head>
-	<style>
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-		}
-		.rad {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-	</style>
-	<body>
-<center><h2>Rainfall Departure over last 10 years</h2></center>
-		<div id="bar" class="container">
-            <canvas id="mybarChart" width="800" height="500"></canvas>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <title>Rainfall</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #dff6e4, #ffffff);
+    }
 
-	<script src="/src/assets/js/bar.js"></script>
-	</body>
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #14532d;
+      font-size: 38px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+    }
+
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <center><h2>Rainfall Departure over last 10 years</h2></center>
+    <p>Historical rainfall trends over the last 10 years.</p>
+    <div id="bar" class="container">
+      <canvas id="mybarChart" width="800" height="500"></canvas>
+    </div>
+
+    <script src="/src/assets/js/bar.js"></script>
+  </body>
 </html>

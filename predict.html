@@ -1,95 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Analysis</title>
 
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #dff6e4, #ffffff);
+      }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+      header {
+        background: linear-gradient(90deg, #14532d, #22c55e);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
 
-.toggle-buttons {
-    margin-top: 10px;
-}
+      .toggle-buttons {
+        margin-top: 10px;
+      }
 
-.toggle-buttons button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-}
+      .toggle-buttons button {
+        background: linear-gradient(90deg, #15803d, #22c55e);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        margin: 8px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
 
-.iframe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
+      .toggle-buttons button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(34, 197, 94, 0.35);
+      }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+      .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
 
+      iframe {
+        width: 95%;
+        height: 95%;
+        border: none;
+        border-radius: 15px;
+        background: white;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Analysis</h1>
-        <div class="toggle-buttons">
-            <button id="detection-button">Tree Count</button>
-            <button id="segmentation-button">Green Cover</button>
-            <button id="species-button">Tree Species</button>
-            <button id="path-button">Optimal Pathing</button>
-            <button id="historical-button">Historical Data</button>
-        </div>
+      <h1>Analysis</h1>
+      <p>
+        Analyze tree count, green cover, species detection, optimal path and
+        historical environmental data.
+      </p>
+
+      <div class="toggle-buttons">
+        <button id="detection-button">Tree Count</button>
+        <button id="segmentation-button">Green Cover</button>
+        <button id="species-button">Tree Species</button>
+        <button id="path-button">Optimal Pathing</button>
+        <button id="historical-button">Historical Data</button>
+      </div>
     </header>
+
     <div class="iframe-container">
-        <iframe id="model-iframe" src="dist/index.html"></iframe>
+      <iframe id="model-iframe" src="dist/index.html"></iframe>
     </div>
+
+    <!-- <section style="text-align: center; padding: 30px">
+      <h2>Welcome to TreeSense Imaging</h2>
+      <p>Select any module below to start AI-based environmental analysis.</p>
+    </section> -->
+
     <script>
-        const detectionButton = document.getElementById('detection-button');
-const segmentationButton = document.getElementById('segmentation-button');
-const speciesButton = document.getElementById('species-button');
-const pathButton = document.getElementById('path-button');
-const historicalButton = document.getElementById('historical-button');
-const modelIframe = document.getElementById('model-iframe');
+      const detectionButton = document.getElementById("detection-button");
+      const segmentationButton = document.getElementById("segmentation-button");
+      const speciesButton = document.getElementById("species-button");
+      const pathButton = document.getElementById("path-button");
+      const historicalButton = document.getElementById("historical-button");
+      const modelIframe = document.getElementById("model-iframe");
 
-detectionButton.addEventListener('click', () => {
-    modelIframe.src = 'dist/index.html';
-});
+      detectionButton.addEventListener("click", () => {
+        modelIframe.src = "dist/index.html";
+      });
 
-segmentationButton.addEventListener('click', () => {
-    modelIframe.src = 'object_segmentation.html';
-});
+      segmentationButton.addEventListener("click", () => {
+        modelIframe.src = "object_segmentation.html";
+      });
 
-speciesButton.addEventListener('click', () => {
-    modelIframe.src = 'tree_species.html';
-});
+      speciesButton.addEventListener("click", () => {
+        modelIframe.src = "tree_species.html";
+      });
 
-pathButton.addEventListener('click', () => {
-    modelIframe.src = 'optimal_path.html';
-});
+      pathButton.addEventListener("click", () => {
+        modelIframe.src = "optimal_path.html";
+      });
 
-historicalButton.addEventListener('click', () => {
-    modelIframe.src = 'historical_data.html';
-});
-
+      historicalButton.addEventListener("click", () => {
+        modelIframe.src = "historical_data.html";
+      });
     </script>
-</body>
+    <script
+      defer=""
+      src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+      integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"cd7ceaa791c64455af33cd51818e5228","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

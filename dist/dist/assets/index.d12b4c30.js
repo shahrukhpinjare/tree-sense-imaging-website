@@ -12903,13 +12903,11 @@ class bi {
             let h;
             ((c.onsuccess = () => {
               h = i.transaction(ai, "readwrite");
-              const p = h
-                .objectStore(ai)
-                .put({
-                  modelPath: this.modelPath,
-                  modelArtifacts: n,
-                  modelArtifactsInfo: a,
-                });
+              const p = h.objectStore(ai).put({
+                modelPath: this.modelPath,
+                modelArtifacts: n,
+                modelArtifactsInfo: a,
+              });
               ((p.onsuccess = () => s({ modelArtifactsInfo: a })),
                 (p.onerror = (f) => {
                   u = l.objectStore(so);
@@ -23474,12 +23472,10 @@ Object.defineProperty(Wo, Symbol.hasInstance, {
     ((this.accumulatedGrads = e
       .slice(0, n)
       .map((r) => ({ originalName: r.name, variable: r.tensor.variable(s) }))),
-      (this.accumulatedUpdates = e
-        .slice(n, n * 2)
-        .map((r) => ({
-          originalName: r.name,
-          variable: r.tensor.variable(s),
-        }))));
+      (this.accumulatedUpdates = e.slice(n, n * 2).map((r) => ({
+        originalName: r.name,
+        variable: r.tensor.variable(s),
+      }))));
   }
   getConfig() {
     return {
@@ -23665,12 +23661,10 @@ Y(W1);
     ((this.accumulatedFirstMoment = e
       .slice(0, n)
       .map((r) => ({ originalName: r.name, variable: r.tensor.variable(s) }))),
-      (this.accumulatedSecondMoment = e
-        .slice(n, n * 2)
-        .map((r) => ({
-          originalName: r.name,
-          variable: r.tensor.variable(s),
-        }))));
+      (this.accumulatedSecondMoment = e.slice(n, n * 2).map((r) => ({
+        originalName: r.name,
+        variable: r.tensor.variable(s),
+      }))));
   }
   getConfig() {
     return {
@@ -24034,19 +24028,15 @@ Y(H1);
     ((this.accumulatedMeanSquares = e
       .slice(0, n)
       .map((r) => ({ originalName: r.name, variable: r.tensor.variable(s) }))),
-      (this.accumulatedMoments = e
-        .slice(n, n * 2)
-        .map((r) => ({
+      (this.accumulatedMoments = e.slice(n, n * 2).map((r) => ({
+        originalName: r.name,
+        variable: r.tensor.variable(s),
+      }))),
+      this.centered &&
+        (this.accumulatedMeanGrads = e.slice(n * 2, n * 3).map((r) => ({
           originalName: r.name,
           variable: r.tensor.variable(s),
-        }))),
-      this.centered &&
-        (this.accumulatedMeanGrads = e
-          .slice(n * 2, n * 3)
-          .map((r) => ({
-            originalName: r.name,
-            variable: r.tensor.variable(s),
-          }))));
+        }))));
   }
   getConfig() {
     return {
